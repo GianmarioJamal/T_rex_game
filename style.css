@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+.game{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    margin: auto;
+}
+/*qui definiamo gli attributi del personggio come altezza e colore*/
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: burlywood;
+    position:relative;
+    top: 150px;
+}
+/*qui tramite javascript gli daremo il comando che al click del mouse lui salterà*/
+.animate{
+    animation: jump 0.3s linear;
+}
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+/*qui definiamo gli attributi del dell'ostacolo come altezza e colore*/
+#block{
+    background-color: blueviolet;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 130px;
+    left: 500px;
+    /*qui inseriamo l'animazione come uno degli attributi del blocco*/
+    animation: block 1s infinite linear;
+}
+/*qui definiamoz l'animazione del blocco*/
+@keyframes block{
+    0%{left: 500px}
+    100%{left: -20px}
+}
+p{
+    text-align: center;
+}
